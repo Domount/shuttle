@@ -1,6 +1,6 @@
 # Data contracts
 
-JSON on disk is the source of truth. The server reads via `@loom/store`; agents read/write files directly.
+JSON on disk is the source of truth. The server reads via `@domount/shuttle/store`; agents read/write files directly.
 
 ## `config.json`
 

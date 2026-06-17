@@ -1,26 +1,29 @@
-# Loom
+# Shuttle
 
-**Loom** is a local agentic app framework: a **normal Node backend** (Express + JSON store) plus a **smart agent backend** (skills, memory, request queue, Cursor runners) and a **React web client**.
+**Shuttle** is a local agentic app framework: a **normal Node backend** (Express + JSON store) plus a **smart agent backend** (skills, memory, request queue, Cursor runners) and a **React web client**.
 
-## Packages (`@loom/*`)
+Published by [@domount](https://www.npmjs.com/org/domount).
+
+## Packages
 
 | Package | Purpose |
 |---------|---------|
-| `@loom/store` | JSON + memory filesystem I/O |
-| `@loom/server` | Express factory, route helpers |
-| `@loom/agent` | Request queue, runners, registry |
-| `@loom/verify` | Boundaries + tiered verify (`loom-verify`) |
-| `@loom/eslint-config` | Shared ESLint flat config |
-| `@loom/scaffold` | Feature / API / skill generators |
-| `@loom/create-app` | `create-loom-app <name>` CLI |
+| `@domount/shuttle` | Framework — store, server, agent, verify, scaffold, eslint-config |
+| `@domount/create-shuttle` | `create-shuttle-app <name>` CLI |
 
 ## Create an app
 
 ```bash
-node cli/create-app/bin/create-app.mjs my-app
+npx @domount/create-shuttle-app my-app
 cd my-app
 npm install
 npm run dev
+```
+
+Monorepo dev:
+
+```bash
+node cli/create-shuttle/bin/create-shuttle.mjs my-app
 ```
 
 ## Monorepo development
@@ -29,6 +32,14 @@ npm run dev
 cd ~/work/loom
 npm install
 npm test
+```
+
+## Release
+
+```bash
+npm login
+npm run release:dry   # dry run
+npm run release       # publish @domount/shuttle + @domount/create-shuttle
 ```
 
 ## Architecture
@@ -40,5 +51,14 @@ Web (React) → /api → Express (normal backend)
                          ↑
               Agent (skills + AGENT.md)
 ```
+
+## Agent skills (shipped in every app)
+
+| Skill | Purpose |
+|-------|---------|
+| `skills/optimized-research/` | MCP routing — fast/medium/deep, Parallel/Tavily |
+| `skills/change-verification/` | Post-code-edit `npm run verify` gate |
+
+Domain skills you scaffold should load **optimized-research first** when they use external research.
 
 See `docs/architecture.md`, `docs/agent-protocol.md`, and `docs/extending.md`.

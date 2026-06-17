@@ -1,0 +1,22 @@
+{
+  "name": "@domount/create-shuttle",
+  "version": "0.1.0",
+  "description": "Scaffold a new Shuttle application",
+  "type": "module",
+  "files": [
+    "bin",
+    "template"
+  ],
+  "bin": {
+    "create-shuttle-app": "./bin/create-shuttle.mjs"
+  },
+  "scripts": {
+    "prepublishOnly": "node ../../scripts/sync-create-shuttle-template.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "@domount/shuttle",
+  "version": "0.1.0",
+  "description": "Shuttle — local agentic app framework (Express + agent backend + React)",
+  "type": "module",
+  "exports": {
+    "./store": "./src/store/index.js",
+    "./server": "./src/server/index.js",
+    "./agent": "./src/agent/index.js",
+    "./verify": "./src/verify/index.js",
+    "./verify/boundaries": "./src/verify/boundaries.js",
+    "./verify/tier": "./src/verify/tier.js",
+    "./verify/config": "./src/verify/config.js",
+    "./scaffold": "./src/scaffold/index.js",
+    "./eslint-config": "./src/eslint-config.js"
+  },
+  "bin": {
+    "shuttle-verify": "./bin/verify.mjs",
+    "shuttle-check-boundaries": "./bin/check-boundaries.mjs",
+    "shuttle-scaffold-feature": "./bin/scaffold-feature.mjs",
+    "shuttle-scaffold-api": "./bin/scaffold-api.mjs",
+    "shuttle-scaffold-skill": "./bin/scaffold-skill.mjs"
+  },
+  "scripts": {
+    "test": "node --test src/**/*.test.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "templates"
+  ],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "optionalDependencies": {
+    "@cursor/sdk": "^0.1.0"
+  },
+  "peerDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "globals": "^15.0.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@eslint/js": { "optional": true },
+    "eslint": { "optional": true },
+    "eslint-plugin-react-hooks": { "optional": true },
+    "eslint-plugin-react-refresh": { "optional": true },
+    "globals": { "optional": true },
+    "typescript-eslint": { "optional": true }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

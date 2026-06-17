@@ -1,34 +1,26 @@
 # Agent protocol
 
-Every Loom app ships `AGENT.md` as the agent entry contract.
+## Skills
 
-## Session protocol
+Every Shuttle app ships `skills/optimized-research/` — the base skill for MCP-backed research:
 
-1. Read `memory/active/*`
-2. Process `data/requests/` pending jobs
-3. Follow the task matrix for each request type
+- Decompose questions into fast / medium / deep legs
+- Route to Parallel or Tavily MCP tools
+- Cite every factual claim
+
+Domain skills (`skills/<your-workflow>/`) load **optimized-research first**, then apply project-specific scope and output schemas.
 
 ## Request queue
 
-- Website writes `data/requests/<file>.json` with `status: pending`
-- Cycle types allow one pending job each (configurable in `loom.config.json`)
-- Runners: `manual`, `cursor-cli`, `cursor-sdk`
+- Pending jobs live in `data/requests/` as JSON files
+- Cycle types allow one pending job each (configurable in `shuttle.config.json`)
+- Agents scan for `"status": "pending"` at session start
 
-## runMeta
+## Memory
 
-Agent artifacts should include:
+- `memory/active/` — read every session (preferences, principles)
+- `memory/archive/` — historical context when needed
 
-```json
-{
-  "runMeta": {
-    "at": "ISO-8601",
-    "model": "auto",
-    "skills": ["skill-name"],
-    "tools": []
-  }
-}
-```
+## Verification gate
 
-## After code changes
-
-Run `npm run verify` per `skills/change-verification/SKILL.md`.
+After code edits, agents must run `npm run verify` before marking tasks done (`skills/change-verification/`).

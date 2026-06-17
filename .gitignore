@@ -1,5 +1,6 @@
 node_modules/
 dist/
+cli/create-shuttle/template/
 .DS_Store
 examples/*/node_modules/
 examples/*/server/node_modules/

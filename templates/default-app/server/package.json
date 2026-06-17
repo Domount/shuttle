@@ -8,12 +8,7 @@
     "test": "node --test 'src/**/*.test.js' '../shared/**/*.test.js'"
   },
   "dependencies": {
-    "@loom/agent": "file:{{loomRoot}}/packages/agent",
-    "@loom/server": "file:{{loomRoot}}/packages/server",
-    "@loom/store": "file:{{loomRoot}}/packages/store",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2"
+    "@domount/shuttle": "{{shuttle}}"
   },
   "imports": {
     "#server/*": "./src/*",

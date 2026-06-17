@@ -1,4 +1,4 @@
-import { normalizeAgentSettings } from "@loom/agent";
+import { normalizeAgentSettings } from "@domount/shuttle/agent";
 import { store } from "#server/store.js";
 
 const CONFIG_FILE = "config.json";

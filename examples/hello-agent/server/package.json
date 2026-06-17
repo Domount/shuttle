@@ -1,5 +1,5 @@
 {
-  "name": "examples/hello-agent-server",
+  "name": "hello-agent-server",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,12 +8,7 @@
     "test": "node --test 'src/**/*.test.js' '../shared/**/*.test.js'"
   },
   "dependencies": {
-    "@loom/agent": "file:/Users/nikatsutskiridze/work/loom/packages/agent",
-    "@loom/server": "file:/Users/nikatsutskiridze/work/loom/packages/server",
-    "@loom/store": "file:/Users/nikatsutskiridze/work/loom/packages/store",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2"
+    "@domount/shuttle": "file:/Users/nikatsutskiridze/work/loom/packages/shuttle"
   },
   "imports": {
     "#server/*": "./src/*",

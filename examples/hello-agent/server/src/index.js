@@ -1,4 +1,4 @@
-import { loadEnv } from "@loom/server";
+import { loadEnv } from "@domount/shuttle/server";
 import { createProjectApp } from "#server/app.js";
 
 loadEnv();

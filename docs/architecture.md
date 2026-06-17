@@ -1,6 +1,6 @@
-# Loom architecture
+# Shuttle architecture
 
-Loom apps have four code layers and two agent layers.
+Shuttle apps have four code layers and two agent layers.
 
 ## Code layers
 
@@ -20,8 +20,8 @@ The **normal backend** serves CRUD, deterministic logic, and external providers.
 
 ## Configuration
 
-`loom.config.json` at the project root: ports, request types, verify maps, agent defaults.
+`shuttle.config.json` at the project root: ports, request types, verify maps, agent defaults.
 
 ## Verification
 
-Tier 0–3 via `npm run verify`. See `@loom/verify`.
+Tier 0–3 via `npm run verify`. See `@domount/shuttle/verify`.

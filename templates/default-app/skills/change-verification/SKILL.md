@@ -1,6 +1,6 @@
 ---
 name: change-verification
-description: Mandatory post-change gate for Loom apps. Run npm run verify before marking coding tasks done.
+description: Mandatory post-change gate for Shuttle apps. Run npm run verify before marking coding tasks done.
 ---
 
 # Change Verification
