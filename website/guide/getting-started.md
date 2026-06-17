@@ -3,7 +3,7 @@
 ## Create an app
 
 ```bash
-npx @domount/create-shuttle-app my-app
+npx @domount/create-shuttle my-app
 cd my-app
 npm install
 npm run dev

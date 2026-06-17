@@ -29,4 +29,4 @@ npm run release
 
 Publishes `@domount/shuttle` and `@domount/create-shuttle`. Bump `version` in both packages before each release (keep in sync).
 
-New apps from `npx @domount/create-shuttle-app` use published semver (`^0.1.1`). Monorepo dev uses `file:` when `packages/shuttle` exists locally.
+New apps from `npx @domount/create-shuttle` use published semver (`^0.1.1`). Monorepo dev uses `file:` when `packages/shuttle` exists locally.

@@ -74,7 +74,7 @@ export default createShuttleEslintConfig();
 CLI binary: `create-shuttle-app`
 
 ```bash
-npx @domount/create-shuttle-app <directory>
+npx @domount/create-shuttle <directory>
 ```
 
 Scaffolds a full Shuttle app from the bundled template.
