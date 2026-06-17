@@ -1,14 +1,14 @@
 # @domount/create-shuttle
 
 [![npm version](https://img.shields.io/npm/v/@domount/create-shuttle.svg)](https://www.npmjs.com/package/@domount/create-shuttle)
-[![license](https://img.shields.io/npm/l/@domount/create-shuttle.svg)](https://github.com/Domount/shuttle/blob/main/LICENSE)
+[![license](https://img.shields.io/npm/l/@domount/create-shuttle.svg)](https://github.com/Domount/shuttle/blob/master/LICENSE)
 
 Scaffold a new [Shuttle](https://domount.github.io/shuttle/) application — Express backend, agent skills, memory, request queue, and React web client.
 
 ## Usage
 
 ```bash
-npx @domount/create-shuttle-app my-app
+npx @domount/create-shuttle my-app
 cd my-app
 npm install
 npm run dev
@@ -27,7 +27,7 @@ npm run dev
 The CLI accepts a single positional argument — the project directory name:
 
 ```bash
-npx @domount/create-shuttle-app ./my-custom-path
+npx @domount/create-shuttle ./my-custom-path
 ```
 
 ## Requirements
@@ -40,4 +40,4 @@ Full documentation: [domount.github.io/shuttle](https://domount.github.io/shuttl
 
 ## License
 
-[MIT](https://github.com/Domount/shuttle/blob/main/LICENSE)
+[MIT](https://github.com/Domount/shuttle/blob/master/LICENSE)

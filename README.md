@@ -1,7 +1,7 @@
 # Shuttle
 
 [![npm](https://img.shields.io/npm/v/@domount/shuttle.svg)](https://www.npmjs.com/package/@domount/shuttle)
-[![license](https://img.shields.io/github/license/Domount/shuttle.svg)](https://github.com/Domount/shuttle/blob/main/LICENSE)
+[![license](https://img.shields.io/github/license/Domount/shuttle.svg)](https://github.com/Domount/shuttle/blob/master/LICENSE)
 [![docs](https://img.shields.io/badge/docs-domount.github.io%2Fshuttle-blue)](https://domount.github.io/shuttle/)
 
 **Shuttle** is a local agentic app framework: a **normal Node backend** (Express + JSON store) plus a **smart agent backend** (skills, memory, request queue, Cursor runners) and a **React web client**.
@@ -20,7 +20,7 @@ Published by [@domount](https://www.npmjs.com/org/domount).
 ## Create an app
 
 ```bash
-npx @domount/create-shuttle-app my-app
+npx @domount/create-shuttle my-app
 cd my-app
 npm install
 npm run dev
