@@ -1,8 +1,28 @@
 {
   "name": "@domount/create-shuttle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scaffold a new Shuttle application",
   "type": "module",
+  "author": "Domount",
+  "license": "MIT",
+  "homepage": "https://domount.github.io/shuttle/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Domount/shuttle.git",
+    "directory": "cli/create-shuttle"
+  },
+  "bugs": {
+    "url": "https://github.com/Domount/shuttle/issues"
+  },
+  "keywords": [
+    "shuttle",
+    "scaffold",
+    "create-app",
+    "cli",
+    "generator",
+    "cursor",
+    "agent"
+  ],
   "files": [
     "bin",
     "template"

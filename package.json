@@ -2,6 +2,15 @@
   "name": "shuttle",
   "private": true,
   "description": "Shuttle — local agentic app framework (normal backend + smart agent backend + web client)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Domount/shuttle.git"
+  },
+  "homepage": "https://domount.github.io/shuttle/",
+  "bugs": {
+    "url": "https://github.com/Domount/shuttle/issues"
+  },
   "workspaces": [
     "packages/*",
     "cli/*"
@@ -11,7 +20,13 @@
     "lint": "npm run lint --workspaces --if-present",
     "sync:template": "node scripts/sync-create-shuttle-template.mjs",
     "release": "node scripts/publish-all.mjs",
-    "release:dry": "node scripts/publish-all.mjs --dry-run"
+    "release:dry": "node scripts/publish-all.mjs --dry-run",
+    "docs:dev": "vitepress dev website",
+    "docs:build": "vitepress build website",
+    "docs:preview": "vitepress preview website"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
   },
   "engines": {
     "node": ">=18"

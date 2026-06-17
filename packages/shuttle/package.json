@@ -1,8 +1,30 @@
 {
   "name": "@domount/shuttle",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shuttle — local agentic app framework (Express + agent backend + React)",
   "type": "module",
+  "author": "Domount",
+  "license": "MIT",
+  "homepage": "https://domount.github.io/shuttle/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Domount/shuttle.git",
+    "directory": "packages/shuttle"
+  },
+  "bugs": {
+    "url": "https://github.com/Domount/shuttle/issues"
+  },
+  "keywords": [
+    "shuttle",
+    "agent",
+    "cursor",
+    "express",
+    "react",
+    "framework",
+    "skills",
+    "json-store",
+    "local"
+  ],
   "exports": {
     "./store": "./src/store/index.js",
     "./server": "./src/server/index.js",
