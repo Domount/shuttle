@@ -1,0 +1,21 @@
+{
+  "name": "@loom/scaffold",
+  "version": "0.1.0",
+  "description": "Code generators for Loom apps",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "loom-scaffold-feature": "./bin/scaffold-feature.mjs",
+    "loom-scaffold-api": "./bin/scaffold-api.mjs",
+    "loom-scaffold-skill": "./bin/scaffold-skill.mjs"
+  },
+  "scripts": {
+    "test": "node --test src/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

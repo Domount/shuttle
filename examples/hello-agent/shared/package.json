@@ -1,0 +1,5 @@
+{
+  "name": "examples/hello-agent-shared",
+  "private": true,
+  "type": "module"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "examples/hello-agent",
+  "ports": {
+    "server": 4600,
+    "web": 4601
+  },
+  "requestTypes": {
+    "cycleTypes": ["research-task"],
+    "all": ["research-task", "message"]
+  },
+  "agent": {
+    "runnerId": "manual",
+    "modelId": "auto"
+  },
+  "verify": {
+    "scopedTests": {
+      "server/src/services/config.service": ["server/src/services/config.service.test.js"],
+      "web/src/features/dashboard/": ["shared/example.test.js"]
+    },
+    "corePaths": [
+      "shared/",
+      "server/src/providers/",
+      "server/src/store.js"
+    ]
+  }
+}
