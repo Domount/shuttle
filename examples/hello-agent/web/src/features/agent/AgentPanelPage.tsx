@@ -5,7 +5,7 @@ import type { AgentStreamEvent } from "@web/types";
 import "./agent.css";
 
 export function AgentPanelPage() {
-  const { data: requests, loading, error, reload } = useFetch(() => api.requests());
+  const { data: requests, loading, error, reload } = useFetch(api.requests);
   const [logs, setLogs] = useState<string[]>([]);
   const [running, setRunning] = useState(false);
 

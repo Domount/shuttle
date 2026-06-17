@@ -3,8 +3,8 @@ import { useFetch } from "@web/lib/useFetch";
 import "./dashboard.css";
 
 export function DashboardPage() {
-  const { data: config, loading, error } = useFetch(() => api.config());
-  const { data: memory } = useFetch(() => api.memory());
+  const { data: config, loading, error } = useFetch(api.config);
+  const { data: memory } = useFetch(api.memory);
 
   return (
     <div className="page dashboard-page">
