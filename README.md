@@ -49,7 +49,7 @@ npm run docs:build    # production build
 npm run docs:preview  # preview build output
 ```
 
-Docs deploy automatically to GitHub Pages on push to `main`.
+Docs deploy automatically to GitHub Pages on push to `master`.
 
 ## Release
 
