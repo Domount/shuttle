@@ -38,7 +38,7 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/Domount/shuttle" },
     ],
     editLink: {
-      pattern: "https://github.com/Domount/shuttle/edit/main/website/:path",
+      pattern: "https://github.com/Domount/shuttle/edit/master/website/:path",
     },
     footer: {
       message: "Released under the MIT License.",
