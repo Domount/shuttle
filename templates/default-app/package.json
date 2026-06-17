@@ -1,0 +1,33 @@
+{
+  "name": "{{projectName}}",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "npm install --prefix server && npm install --prefix web",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix web\"",
+    "test": "cd server && npm test",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "check:boundaries": "loom-check-boundaries",
+    "verify": "loom-verify",
+    "verify:all": "loom-verify --all",
+    "scaffold:feature": "loom-scaffold-feature",
+    "scaffold:api": "loom-scaffold-api",
+    "scaffold:skill": "loom-scaffold-skill"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@loom/eslint-config": "file:{{loomRoot}}/packages/eslint-config",
+    "@loom/scaffold": "file:{{loomRoot}}/packages/scaffold",
+    "@loom/verify": "file:{{loomRoot}}/packages/verify",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^15.15.0",
+    "typescript-eslint": "^8.46.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "{{projectName}}-shared",
+  "private": true,
+  "type": "module"
+}

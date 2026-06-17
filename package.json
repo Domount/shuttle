@@ -1,0 +1,16 @@
+{
+  "name": "loom",
+  "private": true,
+  "description": "Loom — local agentic app framework (normal backend + smart agent backend + web client)",
+  "workspaces": [
+    "packages/*",
+    "cli/*"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

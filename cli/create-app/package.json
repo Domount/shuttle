@@ -1,0 +1,12 @@
+{
+  "name": "@loom/create-app",
+  "version": "0.1.0",
+  "description": "Scaffold a new Loom application",
+  "type": "module",
+  "bin": {
+    "create-loom-app": "./bin/create-app.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

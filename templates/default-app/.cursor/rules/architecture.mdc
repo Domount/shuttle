@@ -1,0 +1,6 @@
+---
+description: Loom layer boundaries when editing src/**
+globs: web/src/**,server/src/**,shared/**
+---
+
+Follow docs/architecture/BOUNDARIES.md. No cross-feature imports. Web must not import server.
