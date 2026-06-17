@@ -1,14 +1,17 @@
 {
-  "name": "loom",
+  "name": "shuttle",
   "private": true,
-  "description": "Loom — local agentic app framework (normal backend + smart agent backend + web client)",
+  "description": "Shuttle — local agentic app framework (normal backend + smart agent backend + web client)",
   "workspaces": [
     "packages/*",
     "cli/*"
   ],
   "scripts": {
     "test": "npm run test --workspaces --if-present",
-    "lint": "npm run lint --workspaces --if-present"
+    "lint": "npm run lint --workspaces --if-present",
+    "sync:template": "node scripts/sync-create-shuttle-template.mjs",
+    "release": "node scripts/publish-all.mjs",
+    "release:dry": "node scripts/publish-all.mjs --dry-run"
   },
   "engines": {
     "node": ">=18"

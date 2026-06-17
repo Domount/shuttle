@@ -1,6 +1,6 @@
-# Hello Agent — example Loom app
+# Hello Agent — example Shuttle app
 
-A minimal non-finance demo: queue a `research-task`, agent writes a note to `data/notes/`.
+Demonstrates the dual-backend pattern: Express API + agent panel with `research-task` requests.
 
 ## Run
 
@@ -9,10 +9,13 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:4601 → Agent → Queue research-task → Run (manual runner shows prompt).
+## What's here
 
-## Verify
+- `skills/optimized-research/` — MCP routing (Parallel/Tavily)
+- `skills/research-task/` — domain skill writing `data/notes/<id>.json`
+- `AGENT.md` — agent protocol for this app
 
-```bash
-npm run verify:all
-```
+## Ports
+
+- API: http://localhost:4700
+- Web: http://localhost:4701

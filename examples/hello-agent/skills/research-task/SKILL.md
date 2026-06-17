@@ -5,6 +5,8 @@ description: Simple research workflow for hello-agent example — write a note J
 
 # Research task
 
+Load `skills/optimized-research/` first. Everything there applies (decompose → route fast/medium/deep → cite); this skill defines the hello-agent output.
+
 ## When to use
 
 - `research-task` request is queued
@@ -12,14 +14,21 @@ description: Simple research workflow for hello-agent example — write a note J
 ## Steps
 
 1. Read `memory/active/operating-principles.md`.
-2. Pick a topic from the request payload or default to "Loom framework".
+2. Pick a topic from the request payload or default to "Shuttle framework".
 3. Write `data/notes/<timestamp>.json`:
 
 ```json
 {
   "topic": "...",
   "summary": "...",
-  "runMeta": { "at": "ISO-8601", "model": "...", "skills": ["research-task"] }
+  "sources": [{ "title": "", "url": "" }],
+  "runMeta": {
+    "at": "ISO-8601",
+    "model": "...",
+    "skills": ["optimized-research", "research-task"],
+    "tools": [],
+    "depthChoices": {}
+  }
 }
 ```
 

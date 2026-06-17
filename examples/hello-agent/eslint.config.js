@@ -1,3 +1,3 @@
-import { createLoomEslintConfig } from "@loom/eslint-config";
+import { createShuttleEslintConfig } from "@domount/shuttle/eslint-config";
 
-export default createLoomEslintConfig();
+export default createShuttleEslintConfig();

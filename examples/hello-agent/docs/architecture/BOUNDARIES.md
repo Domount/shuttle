@@ -13,4 +13,4 @@ server/src/                ← routes → services → store/providers
 data/                      ← JSON (never imported as modules)
 ```
 
-See the Loom framework docs for full rules.
+See the Shuttle framework docs for full rules.

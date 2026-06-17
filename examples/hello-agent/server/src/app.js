@@ -1,7 +1,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { createApp } from "@loom/server";
-import { createRequestQueue, createAgentRunner, createRequestsRouter, createAgentRouter } from "@loom/agent";
+import { createApp } from "@domount/shuttle/server";
+import { createRequestQueue, createAgentRunner, createRequestsRouter, createAgentRouter } from "@domount/shuttle/agent";
 import { store } from "#server/store.js";
 import { getConfig } from "#server/services/config.service.js";
 import configRoutes from "#server/routes/config.routes.js";

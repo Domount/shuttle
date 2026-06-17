@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { asyncHandler } from "@loom/server";
+import { asyncHandler } from "@domount/shuttle/server";
 import { getConfig, updateConfigSettings } from "#server/services/config.service.js";
 
 const router = Router();

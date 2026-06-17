@@ -12,4 +12,4 @@ npm run verify:all
 | 2 | boundaries + lint + scoped tests + web build | Bugbot |
 | 3 | boundaries + lint + all tests + web build | Bugbot + Security |
 
-Configured in `loom.config.json` → `verify.scopedTests` and `verify.corePaths`.
+Configured in `shuttle.config.json` → `verify.scopedTests` and `verify.corePaths`.

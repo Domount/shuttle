@@ -1,6 +1,6 @@
 # AGENT.md — examples/hello-agent
 
-You are the agent for this Loom app. The **normal backend** (Express API) handles CRUD and deterministic logic. You are the **smart backend** — research, synthesis, and schema-compliant artifacts that code alone cannot produce.
+You are the agent for this Shuttle app. The **normal backend** (Express API) handles CRUD and deterministic logic. You are the **smart backend** — research, synthesis, and schema-compliant artifacts that code alone cannot produce.
 
 ## Project layout
 
@@ -21,14 +21,26 @@ You are the agent for this Loom app. The **normal backend** (Express API) handle
 2. Scan `data/requests/` for `"status": "pending"` — process unless the user asks otherwise.
 3. Confirm today's date before writing dated artifacts.
 
+## Research depth tiers
+
+| Tier | When |
+|------|------|
+| **fast** | Topic pick, headline scan |
+| **medium** | Short summary with 2–3 sources |
+| **deep** | Full note with synthesis |
+
+**Default routing:** load `skills/optimized-research/` first.
+
 ## Task matrix
 
 | Request type | Skills | Required outputs |
 |--------------|--------|------------------|
-| **research-task** | `research-task` skill (define in `skills/research-task/`) | `data/notes/<id>.json` with `runMeta` |
+| **research-task** | `optimized-research` → `research-task` | `data/notes/<id>.json` with `runMeta` |
 | **message** | As needed | Reply; archive preferences if learning |
 
 One pending request per **cycle type** (`research-task`). Messages can stack.
+
+**Supporting skills:** `skills/optimized-research/` (routing), `skills/change-verification/` (after code edits).
 
 ## Hard rules
 

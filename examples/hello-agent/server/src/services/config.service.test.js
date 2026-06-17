@@ -3,8 +3,8 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import test from "node:test";
 import assert from "node:assert/strict";
-import { createStore } from "@loom/store";
-import { normalizeAgentSettings } from "@loom/agent";
+import { createStore } from "@domount/shuttle/store";
+import { normalizeAgentSettings } from "@domount/shuttle/agent";
 
 test("normalizeAgentSettings defaults", () => {
   const s = normalizeAgentSettings({});

@@ -1,6 +1,6 @@
 # AGENT.md — {{projectName}}
 
-You are the agent for this Loom app. The **normal backend** (Express API) handles CRUD and deterministic logic. You are the **smart backend** — research, synthesis, and schema-compliant artifacts that code alone cannot produce.
+You are the agent for this Shuttle app. The **normal backend** (Express API) handles CRUD and deterministic logic. You are the **smart backend** — research, synthesis, and schema-compliant artifacts that code alone cannot produce.
 
 ## Project layout
 
@@ -21,14 +21,30 @@ You are the agent for this Loom app. The **normal backend** (Express API) handle
 2. Scan `data/requests/` for `"status": "pending"` — process unless the user asks otherwise.
 3. Confirm today's date before writing dated artifacts.
 
+## Research depth tiers
+
+Use consistently; record per leg in `runMeta.depthChoices`.
+
+| Tier | When | What you do |
+|------|------|-------------|
+| **fast** | Status checks, single facts, headline scan | Minutes-scale; Parallel quick search |
+| **medium** | Light comparison, a few related findings | Multi-source; batched search |
+| **deep** | New domain artifact, monthly refresh, hard decisions | Tavily research + primary sources |
+
+**Default routing:** load `skills/optimized-research/` first — fast legs for checks; deep legs for new or monthly artifacts.
+
 ## Task matrix
 
 | Request type | Skills | Required outputs |
 |--------------|--------|------------------|
-| **research-task** | _(define your skill)_ | _(define data files)_ |
+| **research-task** | `optimized-research` → _(your domain skill)_ | _(define data files)_ |
 | **message** | As needed | Reply; archive preferences if learning |
 
 One pending request per **cycle type** (`research-task`). Messages can stack.
+
+**Supporting skills:** `skills/optimized-research/` (routing), `skills/change-verification/` (mandatory after code edits).
+
+Domain skills you add via `npm run scaffold:skill` should say **load `skills/optimized-research/` first** when they perform external research.
 
 ## Hard rules
 

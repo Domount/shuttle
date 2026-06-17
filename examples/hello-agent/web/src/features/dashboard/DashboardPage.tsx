@@ -9,7 +9,7 @@ export function DashboardPage() {
   return (
     <div className="page dashboard-page">
       <h1>Dashboard</h1>
-      <p className="muted">Welcome to examples/hello-agent — your Loom app shell.</p>
+      <p className="muted">Welcome to examples/hello-agent — your Shuttle app shell.</p>
 
       {loading && <p>Loading…</p>}
       {error && <p className="error">{error}</p>}

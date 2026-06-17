@@ -9,4 +9,4 @@ description: Scaffold server API routes and service with npm run scaffold:api --
 npm run scaffold:api -- Orders
 ```
 
-Creates service, routes, test; patches `app.js`, `client.ts`, `loom.config.json`.
+Creates service, routes, test; patches `app.js`, `client.ts`, `shuttle.config.json`.
