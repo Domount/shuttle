@@ -19,7 +19,7 @@ Update `AGENT.md` task matrix and `data/README.md` schemas.
 
 `@domount/shuttle/store` exposes `createStore()`. Implement the same interface against SQLite/Postgres and replace `server/src/store.js`.
 
-## Publish
+## Publish (monorepo maintainers)
 
 ```bash
 npm login

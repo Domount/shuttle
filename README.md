@@ -1,6 +1,12 @@
 # Shuttle
 
+[![npm](https://img.shields.io/npm/v/@domount/shuttle.svg)](https://www.npmjs.com/package/@domount/shuttle)
+[![license](https://img.shields.io/github/license/Domount/shuttle.svg)](https://github.com/Domount/shuttle/blob/main/LICENSE)
+[![docs](https://img.shields.io/badge/docs-domount.github.io%2Fshuttle-blue)](https://domount.github.io/shuttle/)
+
 **Shuttle** is a local agentic app framework: a **normal Node backend** (Express + JSON store) plus a **smart agent backend** (skills, memory, request queue, Cursor runners) and a **React web client**.
+
+**Documentation:** [domount.github.io/shuttle](https://domount.github.io/shuttle/)
 
 Published by [@domount](https://www.npmjs.com/org/domount).
 
@@ -8,8 +14,8 @@ Published by [@domount](https://www.npmjs.com/org/domount).
 
 | Package | Purpose |
 |---------|---------|
-| `@domount/shuttle` | Framework — store, server, agent, verify, scaffold, eslint-config |
-| `@domount/create-shuttle` | `create-shuttle-app <name>` CLI |
+| [`@domount/shuttle`](https://www.npmjs.com/package/@domount/shuttle) | Framework — store, server, agent, verify, scaffold, eslint-config |
+| [`@domount/create-shuttle`](https://www.npmjs.com/package/@domount/create-shuttle) | `create-shuttle-app` CLI |
 
 ## Create an app
 
@@ -29,10 +35,21 @@ node cli/create-shuttle/bin/create-shuttle.mjs my-app
 ## Monorepo development
 
 ```bash
-cd ~/work/loom
+git clone git@github.com:Domount/shuttle.git
+cd shuttle
 npm install
 npm test
 ```
+
+## Documentation site
+
+```bash
+npm run docs:dev      # local preview at http://localhost:5173/shuttle/
+npm run docs:build    # production build
+npm run docs:preview  # preview build output
+```
+
+Docs deploy automatically to GitHub Pages on push to `main`.
 
 ## Release
 
@@ -41,6 +58,8 @@ npm login
 npm run release:dry   # dry run
 npm run release       # publish @domount/shuttle + @domount/create-shuttle
 ```
+
+Bump `version` in both `packages/shuttle/package.json` and `cli/create-shuttle/package.json` before each release (keep in sync).
 
 ## Architecture
 
@@ -61,4 +80,6 @@ Web (React) → /api → Express (normal backend)
 
 Domain skills you scaffold should load **optimized-research first** when they use external research.
 
-See `docs/architecture.md`, `docs/agent-protocol.md`, and `docs/extending.md`.
+## License
+
+[MIT](LICENSE)
