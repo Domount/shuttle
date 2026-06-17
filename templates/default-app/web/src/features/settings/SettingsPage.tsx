@@ -5,7 +5,7 @@ import type { AgentSettings } from "@web/types";
 import "./settings.css";
 
 export function SettingsPage() {
-  const { data: config, loading, error, reload } = useFetch(() => api.config());
+  const { data: config, loading, error, reload } = useFetch(api.config);
   const [options, setOptions] = useState<Awaited<ReturnType<typeof api.agentOptions>> | null>(null);
   const [agent, setAgent] = useState<AgentSettings>({ runnerId: "manual", modelId: "auto" });
   const [saving, setSaving] = useState(false);
