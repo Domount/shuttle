@@ -35,14 +35,17 @@ export function SettingsPage() {
 
   return (
     <div className="page settings-page">
-      <h1>Settings</h1>
+      <header className="page-header">
+        <h1>Settings</h1>
+        <p className="lead">Configure the agent runner and model defaults for this app.</p>
+      </header>
 
-      {loading && <p>Loading…</p>}
+      {loading && <p className="muted">Loading…</p>}
       {error && <p className="error">{error}</p>}
 
       {options && (
         <section className="card">
-          <h2>Agent runner</h2>
+          <h2>Agent</h2>
           <label>
             Runner
             <select
@@ -72,7 +75,7 @@ export function SettingsPage() {
             </label>
           )}
           <button type="button" className="btn" disabled={saving} onClick={save}>
-            Save
+            {saving ? "Saving…" : "Save"}
           </button>
           {saveMsg && <p className="muted">{saveMsg}</p>}
         </section>

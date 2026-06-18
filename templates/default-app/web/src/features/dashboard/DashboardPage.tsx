@@ -8,10 +8,20 @@ export function DashboardPage() {
 
   return (
     <div className="page dashboard-page">
-      <h1>Dashboard</h1>
-      <p className="muted">Welcome to {{projectName}} — your Shuttle app shell.</p>
+      <header className="page-header">
+        <h1>Dashboard</h1>
+        <p className="lead">
+          Shuttle — a local agentic app framework with a normal Node backend, smart agent layer, and React client.
+        </p>
+        <div className="pill-row">
+          <span className="pill">Express API</span>
+          <span className="pill">JSON store</span>
+          <span className="pill">Agent skills</span>
+          <span className="pill">React</span>
+        </div>
+      </header>
 
-      {loading && <p>Loading…</p>}
+      {loading && <p className="muted">Loading…</p>}
       {error && <p className="error">{error}</p>}
 
       {config && (
@@ -21,10 +31,10 @@ export function DashboardPage() {
         </section>
       )}
 
-      {memory && (
+      {memory?.active && (
         <section className="card">
-          <h2>Active memory</h2>
-          <p className="muted">{Object.keys(memory.active).length} files loaded</p>
+          <h2>Memory</h2>
+          <p className="muted">{Object.keys(memory.active).length} active files in memory</p>
         </section>
       )}
     </div>

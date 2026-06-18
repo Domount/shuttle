@@ -1,6 +1,6 @@
 {
   "name": "@domount/create-shuttle",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Scaffold a new Shuttle application",
   "type": "module",
   "author": "Domount",

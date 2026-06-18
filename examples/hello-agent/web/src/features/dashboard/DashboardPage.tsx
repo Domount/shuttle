@@ -21,7 +21,7 @@ export function DashboardPage() {
         </section>
       )}
 
-      {memory && (
+      {memory?.active && (
         <section className="card">
           <h2>Active memory</h2>
           <p className="muted">{Object.keys(memory.active).length} files loaded</p>
