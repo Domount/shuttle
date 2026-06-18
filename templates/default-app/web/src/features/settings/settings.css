@@ -1,14 +1,8 @@
-.settings-page label {
-  display: block;
-  margin-bottom: 0.75rem;
+.settings-page .btn {
+  margin-top: 0.25rem;
 }
 
-.settings-page select {
-  display: block;
-  margin-top: 0.25rem;
-  padding: 0.4rem;
-  background: var(--color-bg);
-  color: var(--color-text);
-  border: 1px solid #2a3544;
-  border-radius: 4px;
+.settings-page .muted {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
 }

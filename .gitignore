@@ -1,5 +1,6 @@
 node_modules/
 dist/
+build/
 cli/create-shuttle/template/
 website/.vitepress/cache/
 website/.vitepress/dist/

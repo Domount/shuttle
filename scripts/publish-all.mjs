@@ -14,6 +14,7 @@ function run(cmd) {
 
 console.log(dryRun ? "Dry-run release (@domount/*)" : "Publishing @domount/* packages");
 
+run("node scripts/sync-favicon.mjs");
 run("node scripts/sync-create-shuttle-template.mjs");
 run("npm test");
 

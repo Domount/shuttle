@@ -3,6 +3,8 @@ import cors from "cors";
 import { config as loadDotenv } from "dotenv";
 import path from "node:path";
 
+const { Router } = express;
+
 /**
  * @param {{ envPath?: string }} [options]
  */
@@ -74,4 +76,4 @@ export function createJsonRoutes({ store, relDir, idField }) {
   return router;
 }
 
-export { express };
+export { express, Router };

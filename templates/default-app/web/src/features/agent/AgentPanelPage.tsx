@@ -44,8 +44,10 @@ export function AgentPanelPage() {
 
   return (
     <div className="page agent-page">
-      <h1>Agent</h1>
-      <p className="muted">Queue jobs for the smart backend. One pending research-task at a time.</p>
+      <header className="page-header">
+        <h1>Agent</h1>
+        <p className="lead">Queue jobs for the smart backend. One pending research-task at a time.</p>
+      </header>
 
       <div className="agent-actions">
         <button type="button" className="btn" onClick={() => queue("research-task")}>
@@ -56,7 +58,7 @@ export function AgentPanelPage() {
         </button>
       </div>
 
-      {loading && <p>Loading…</p>}
+      {loading && <p className="muted">Loading…</p>}
       {error && <p className="error">{error}</p>}
 
       {requests && (
@@ -70,11 +72,20 @@ export function AgentPanelPage() {
             </tr>
           </thead>
           <tbody>
+            {requests.length === 0 && (
+              <tr>
+                <td colSpan={4} className="muted">
+                  No requests yet
+                </td>
+              </tr>
+            )}
             {requests.map((r) => (
               <tr key={r.id}>
                 <td>{r.type}</td>
-                <td>{r.status}</td>
-                <td>{r.createdAt}</td>
+                <td>
+                  <span className={`status${r.status === "pending" ? " status-pending" : ""}`}>{r.status}</span>
+                </td>
+                <td className="muted">{r.createdAt}</td>
                 <td>
                   {r.status === "pending" && (
                     <button type="button" className="btn" disabled={running} onClick={() => runStream(r.id)}>

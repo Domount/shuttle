@@ -1,5 +1,24 @@
 .agent-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.agent-page .table {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.agent-page .table th:first-child,
+.agent-page .table td:first-child {
+  padding-left: 1rem;
+}
+
+.agent-page .table th:last-child,
+.agent-page .table td:last-child {
+  padding-right: 1rem;
 }

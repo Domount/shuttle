@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { cpSync, existsSync, mkdirSync, rmSync } from "node:fs";
+import { cpSync, existsSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -12,10 +12,9 @@ if (!existsSync(source)) {
   process.exit(1);
 }
 
-if (existsSync(dest)) {
-  rmSync(dest, { recursive: true, force: true });
+if (!existsSync(dest)) {
+  mkdirSync(dest, { recursive: true });
 }
 
-mkdirSync(dest, { recursive: true });
-cpSync(source, dest, { recursive: true });
+cpSync(source, dest, { recursive: true, force: true });
 console.log(`Synced template → cli/create-shuttle/template`);
