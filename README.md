@@ -10,6 +10,17 @@
 
 Published by [@domount](https://www.npmjs.com/org/domount).
 
+## Community
+
+| | |
+|---|---|
+| [Contributing](CONTRIBUTING.md) | Development setup, PR guidelines |
+| [Code of Conduct](CODE_OF_CONDUCT.md) | Community standards |
+| [Security](SECURITY.md) | Report vulnerabilities privately |
+| [Changelog](CHANGELOG.md) | Release history |
+
+If Shuttle helps you, consider [supporting the project on Liberapay](https://liberapay.com/domount/).
+
 ## Packages
 
 | Package | Purpose |

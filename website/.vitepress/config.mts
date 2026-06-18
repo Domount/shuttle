@@ -10,6 +10,7 @@ export default defineConfig({
       { text: "Guide", link: "/guide/getting-started" },
       { text: "API", link: "/api/" },
       { text: "GitHub", link: "https://github.com/Domount/shuttle" },
+      { text: "Sponsor", link: "https://liberapay.com/domount/" },
       {
         text: "npm",
         link: "https://www.npmjs.com/package/@domount/shuttle",
