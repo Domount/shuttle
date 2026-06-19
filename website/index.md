@@ -2,6 +2,9 @@
 layout: home
 
 hero:
+  image:
+    src: /shuttle-icon.png
+    alt: Shuttle
   name: Shuttle
   text: Local agentic app framework
   tagline: Normal Node backend + smart agent backend + React web client

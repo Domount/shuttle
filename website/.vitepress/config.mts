@@ -4,8 +4,12 @@ export default defineConfig({
   title: "Shuttle",
   description: "Local agentic app framework — Express + agent backend + React",
   base: "/shuttle/",
-  head: [["link", { rel: "icon", href: "/shuttle/favicon.svg" }]],
+  head: [
+    ["link", { rel: "icon", href: "/shuttle/favicon.png", type: "image/png" }],
+    ["link", { rel: "apple-touch-icon", href: "/shuttle/apple-touch-icon.png" }],
+  ],
   themeConfig: {
+    logo: { src: "/shuttle-icon.png", width: 24, height: 24 },
     nav: [
       { text: "Guide", link: "/guide/getting-started" },
       { text: "API", link: "/api/" },

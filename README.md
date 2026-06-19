@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="brand/shuttle-icon.png" alt="Shuttle" width="96" height="96" />
+</p>
+
 # Shuttle
 
 [![npm](https://img.shields.io/npm/v/@domount/shuttle.svg)](https://www.npmjs.com/package/@domount/shuttle)
@@ -8,7 +12,7 @@
 
 **Documentation:** [domount.github.io/shuttle](https://domount.github.io/shuttle/)
 
-Published by [@domount](https://www.npmjs.com/org/domount).
+Published by <a href="https://github.com/Domount"><img src="brand/domount-icon.png" alt="Domount" width="20" height="20" valign="middle" /></a> [@domount](https://www.npmjs.com/org/domount).
 
 ## Community
 

@@ -30,6 +30,7 @@
     "verify:app": "npm run verify --prefix build/default-app"
   },
   "devDependencies": {
+    "sharp": "^0.35.1",
     "vitepress": "^1.6.4"
   },
   "engines": {

@@ -1,4 +1,5 @@
 import { Link, Route, Routes } from "react-router-dom";
+import { AppIcon } from "@web/components/AppIcon";
 import { DashboardPage } from "@web/features/dashboard/DashboardPage";
 import { AgentPanelPage } from "@web/features/agent/AgentPanelPage";
 import { SettingsPage } from "@web/features/settings/SettingsPage";
@@ -13,7 +14,10 @@ export function App() {
   return (
     <div className="layout">
       <aside className="sidebar">
-        <div className="brand">examples/hello-agent</div>
+        <div className="brand">
+          <AppIcon className="brand-mark" size={20} />
+          <span>Shuttle</span>
+        </div>
         <nav>
           {NAV.map((item) => (
             <Link key={item.to} to={item.to} className="nav-link">

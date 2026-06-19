@@ -32,9 +32,17 @@ body {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--color-accent);
+}
+
+.brand-mark {
+  flex-shrink: 0;
+  display: block;
 }
 
 .nav-link {
